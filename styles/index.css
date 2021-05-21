@@ -3,14 +3,41 @@
 }
 
 body {
+  font-size: 16px;
+  font-family: Inter;
+
   background-color: var(--dark-blue);
   padding: 32px;
 }
 
 .cabecalho {
   display: flex;
+  align-items: center;
+  height: 56px;
 }
 
 .cabecalho .logo {
   margin-top: 12px;
 }
+
+.barra-pesquisa {
+  height: 56px;
+  width: 752px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  border: none;
+  color: #FFFFFF;
+
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px 14px;
+
+  margin-left: 167px;
+}
+
+.barra-pesquisa:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
