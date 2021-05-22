@@ -47,6 +47,16 @@ body {
 .cabecalho .author {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 106px;
+  height: 56px;
+  border-radius: 8px;
+}
+
+.cabecalho .author:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .cabecalho .author__nome {
