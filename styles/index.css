@@ -1,11 +1,12 @@
 :root {
   --dark-blue: #051D3B;
   --white-neutral: #FFFFFF;
+
+  --font-body: 16px/1.5rem Inter;
 }
 
 body {
-  font-size: 16px;
-  font-family: Inter;
+  font: var(--font-body);
 
   background-color: var(--dark-blue);
   padding: 32px;
@@ -37,7 +38,7 @@ body {
   line-height: 24px;
   padding: 0px 14px;
 
-
+  font: var(--font-body);
 }
 
 .cabecalho .barra-pesquisa:hover {
