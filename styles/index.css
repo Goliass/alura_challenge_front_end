@@ -2,7 +2,7 @@
   --dark-blue: #051D3B;
   --white-neutral: #FFFFFF;
 
-  --font-body: 16px/1.5rem Inter;
+  --font-body: 16px/1.5rem Inter, sans-serif;
 }
 
 body {
