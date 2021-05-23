@@ -17,16 +17,29 @@ body {
   align-items: center;
   height: 56px;
 
-  justify-content: space-between;
+  width: 100%;
+
+  /* justify-content: space-between; */
+}
+
+.cabecalho .containerLogo {
+  width: 20%;
 }
 
 .cabecalho .logo {
   margin-top: 12px;
 }
 
+.cabecalho .containerBarra-pesquisa {
+  width: 60%;
+  
+  display: flex;
+  justify-content: center;
+}
+
 .cabecalho .barra-pesquisa {
   height: 56px;
-  width: 752px;
+  width: 90%;
   box-sizing: border-box;
 
   background: rgba(255, 255, 255, 0.16);
@@ -43,6 +56,13 @@ body {
 
 .cabecalho .barra-pesquisa:hover {
   background-color: rgba(255, 255, 255, 0.24);
+}
+
+.containerAuthor {
+  width: 20%;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
 .cabecalho .author {
