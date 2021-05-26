@@ -59,6 +59,11 @@ body {
   font: var(--font-body);
 }
 
+.cabecalho .barra-pesquisa::placeholder {
+  color: var(--white-neutral);
+  opacity: 0.64;
+}
+
 .cabecalho .barra-pesquisa:hover {
   background-color: rgba(255, 255, 255, 0.24);
 }
@@ -158,10 +163,55 @@ body {
 
 /* corpo centro */
 .corpo .codigo {
-  width: var(--width-center)
+  width: var(--width-center);
 }
 
 /* corpo lado direito */
-.corpo .personalizacao {
-  width: var(--width-right)
+.corpo .edicao {
+  width: var(--width-right);
+
+  margin-left: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
+.corpo .edicao > * {
+  width: 100%;
+  max-width: 250px;
+}
+
+.corpo .edicao > *:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.corpo .edicao__titulo {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.4em;
+  color: var(--white-neutral);
+}
+
+.corpo .edicao__nomeProjeto {
+  margin-top: 1rem;
+  border: none;
+
+  box-sizing: border-box;
+  padding: 16px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--white-neutral);
+}
+
+.corpo .edicao__nomeProjeto::placeholder {
+  color: var(--white-neutral);
+  opacity: 0.64;
+}
+
+
+
