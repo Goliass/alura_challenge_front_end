@@ -180,6 +180,13 @@ body {
 .corpo .edicao > * {
   width: 100%;
   max-width: 250px;
+  border: none;
+  border-radius: 8px;
+}
+
+.corpo .edicao > *::placeholder {
+  color: var(--white-neutral);
+  opacity: 0.64;
 }
 
 .corpo .edicao > *:hover {
@@ -195,23 +202,28 @@ body {
 }
 
 .corpo .edicao__nomeProjeto {
-  margin-top: 1rem;
-  border: none;
-
-  box-sizing: border-box;
-  padding: 16px 14px;
-  border-radius: 8px;
-  font-size: 1rem;
-  line-height: 1.5rem;
-
   background: rgba(255, 255, 255, 0.16);
+  box-sizing: border-box;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  padding: 16px 14px;
+  font-size: 1rem;
+
   color: var(--white-neutral);
 }
 
-.corpo .edicao__nomeProjeto::placeholder {
+.corpo .edicao__descricaoProjeto {
+  background: rgba(255, 255, 255, 0.16);
+  box-sizing: border-box;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  padding: 16px 14px;
+  font-size: 1rem;
+
   color: var(--white-neutral);
-  opacity: 0.64;
 }
+
+
 
 
 
