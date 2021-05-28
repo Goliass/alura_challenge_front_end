@@ -189,7 +189,8 @@ body {
   opacity: 0.64;
 }
 
-.corpo .edicao > *:hover {
+/* all direct children except first one */
+.corpo .edicao > *:not(:first-child):hover {
   background: rgba(255, 255, 255, 0.24);
 }
 
