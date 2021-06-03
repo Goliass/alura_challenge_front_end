@@ -189,11 +189,6 @@ body {
   opacity: 0.64;
 }
 
-/* all direct children except first one */
-.corpo .edicao > *:not(:first-child):hover {
-  background: rgba(255, 255, 255, 0.24);
-}
-
 .corpo .edicao__titulo {
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -206,23 +201,54 @@ body {
   background: rgba(255, 255, 255, 0.16);
   box-sizing: border-box;
   margin-top: 1rem;
-  line-height: 1.5rem;
   padding: 16px 14px;
-  font-size: 1rem;
+  font: var(--font-body);
 
   color: var(--white-neutral);
+}
+
+.corpo .edicao__nomeProjeto:hover {
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .corpo .edicao__descricaoProjeto {
   background: rgba(255, 255, 255, 0.16);
   box-sizing: border-box;
-  margin-top: 1rem;
-  line-height: 1.5rem;
+  margin: 1rem 0 40px 0;
   padding: 16px 14px;
-  font-size: 1rem;
+  font: var(--font-body);
 
   color: var(--white-neutral);
 }
+
+.corpo .edicao__descricaoProjeto:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.corpo .edicao__linguagem {
+  appearance: none; /* remove estilo padrão do chrome/firefox */
+
+  background: rgba(255, 255, 255, 0.16) url('../img/seta.svg') 90% 50% no-repeat;
+  box-sizing: border-box;
+
+  margin: 1rem 0 0 0;
+  padding: 16px 14px;
+
+  color: var(--white-neutral);
+  opacity: 0.64;
+
+  font: var(--font-body);
+}
+
+.corpo .edicao__linguagem:hover {
+  background: rgba(255, 255, 255, 0.24) url('../img/seta.svg') 90% 50% no-repeat;
+}
+
+.corpo .edicao__linguagem option {
+  background-color: #2d415b; /* workaround para a cor/opacidade que deveria ser, mas não aplicou no option: rgba(255, 255, 255, 0.16)  */
+}
+
+
 
 
 
