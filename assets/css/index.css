@@ -248,6 +248,18 @@ body {
   background-color: #2d415b; /* workaround para a cor/opacidade que deveria ser, mas não aplicou no option: rgba(255, 255, 255, 0.16)  */
 }
 
+.corpo .edicao__inputCorFundo {
+  box-sizing: border-box;
+
+  height: 56px;
+
+  margin: 1rem 0 0 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+
+  padding: 5px;
+  background: rgba(196, 196, 196, 0.01);
+}
 
 
 
