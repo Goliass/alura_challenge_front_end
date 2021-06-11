@@ -261,8 +261,28 @@ body {
   background: rgba(196, 196, 196, 0.01);
 }
 
+.corpo .edicao__btSalvarProjeto {
+  margin: 2rem 0 0 0;
 
+  box-sizing: border-box;
+  height: 56px;
 
+  background: #5081FB;
+  border-radius: 8px;
 
+  font: var(--font-body);
+  color: #051D3B;
+}
 
+.corpo .edicao__btSalvarProjeto:hover {
+  background: #7BA4FC;
+}
 
+.corpo .edicao__btSalvarProjeto:active {
+  background: #7BA4FC;
+  border: 4px solid rgba(80, 129, 251, 0.72);
+}
+
+.corpo .edicao__btSalvarProjeto:focus {
+  background: #96B9FD;
+}
