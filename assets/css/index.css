@@ -7,6 +7,12 @@
   --width-left: 20%;
   --width-center: 60%;
   --width-right: 20%;
+
+  --elems-center-width: 90%;
+  --elems-center-d-flex: flex;
+  --elems-center-jc-center: center;
+
+  --circle-code-size: 12px;
 }
 
 body {
@@ -23,8 +29,6 @@ body {
   height: 56px;
 
   width: 100%;
-
-  /* justify-content: space-between; */
 }
 
 .cabecalho .containerLogo {
@@ -38,13 +42,13 @@ body {
 .cabecalho .containerBarra-pesquisa {
   width: var(--width-center);
   
-  display: flex;
-  justify-content: center;
+  display: var(--elems-center-d-flex);
+  justify-content: var(--elems-center-jc-center);
 }
 
 .cabecalho .barra-pesquisa {
   height: 56px;
-  width: 90%;
+  width: var(--elems-center-width);
   box-sizing: border-box;
 
   background: rgba(255, 255, 255, 0.16);
@@ -102,6 +106,8 @@ body {
   box-sizing: border-box;
 
   display: flex;
+
+  width: 100%;
 }
 
 /* corpo lado esquerdo */
@@ -161,16 +167,80 @@ body {
   color: var(--white-neutral);
 }
 
-/* corpo centro */
 .corpo .codigo {
+  box-sizing: border-box;
+
   width: var(--width-center);
+
+  display: var(--elems-center-d-flex);
+  justify-content: var(--elems-center-jc-center);
+}
+
+.corpo .codigo__textoContainer {
+  box-sizing: border-box;
+
+  width: var(--elems-center-width);
+  
+  display: var(--elems-center-d-flex);
+  justify-content: var(--elems-center-jc-center);
+
+  align-items: flex-start;
+}
+
+.corpo .codigo .codigo__border {
+  width: 100%;
+  border: 2rem solid #6BD1FF;
+  border-radius: 8px;
+  background: #141414;
+  padding: 1rem;
+  line-height: 1rem;
+}
+
+.corpo .codigo .codigo__circle:first-of-type {
+  margin-left: 0;
+}
+
+.corpo .codigo .codigo__circle {
+  display: inline-block;
+  width: var(--circle-code-size);
+  height: var(--circle-code-size);
+
+  border-radius: calc(var(--circle-code-size) / 2);
+  margin-left: 0.5rem;
+}
+
+.corpo .codigo .codigo__circle1 {
+  background-color: #FF5F56;
+}
+
+.corpo .codigo .codigo__circle2 {
+  background-color: #FFBD2E;
+}
+
+.corpo .codigo .codigo__circle3 {
+  background-color: #27C93F;
+}
+
+.corpo .codigo .codigo__texto {
+  border: 0;
+  box-sizing: border-box;
+
+  background: #141414;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+
+  padding: 1rem;
+  width: 100%;
+
+  color: var(--white-neutral);
+  line-height: 18px;
+  padding: 1.5rem 0 0 0;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
 }
 
 /* corpo lado direito */
 .corpo .edicao {
   width: var(--width-right);
-
-  margin-left: 40px;
 
   display: flex;
   flex-direction: column;
