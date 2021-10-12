@@ -169,21 +169,19 @@ body {
 
 .corpo .codigo {
   box-sizing: border-box;
-
   width: var(--width-center);
 
   display: var(--elems-center-d-flex);
-  justify-content: var(--elems-center-jc-center);
+  flex-direction: column;
+  align-items: center;
 }
 
 .corpo .codigo__textoContainer {
   box-sizing: border-box;
-
   width: var(--elems-center-width);
   
   display: var(--elems-center-d-flex);
   justify-content: var(--elems-center-jc-center);
-
   align-items: flex-start;
 }
 
@@ -236,6 +234,33 @@ body {
   padding: 1.5rem 0 0 0;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 14px;
+}
+
+.corpo .codigo__btnVisualize {
+  box-sizing: border-box;
+  margin-top: 2rem;
+  width: var(--elems-center-width);
+  height: 3.5rem;
+
+  background: rgba(80, 129, 251, 0.08);
+  border: none;
+  border-radius: 8px;
+
+  font: var(--font-body);
+  color: var(--white-neutral);
+}
+
+.corpo .codigo__btnVisualize:hover {
+  background: rgba(80, 129, 251, 0.16);
+}
+
+.corpo .codigo__btnVisualize:active {
+  background: rgba(80, 129, 251, 0.16);
+  border: 4px solid rgba(80, 129, 251, 0.24);
+}
+
+.corpo .codigo__btnVisualize:focus {
+  background: rgba(80, 129, 251, 0.24);
 }
 
 /* corpo lado direito */
