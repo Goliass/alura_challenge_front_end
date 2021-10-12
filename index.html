@@ -14,30 +14,30 @@
     <script src="https://kit.fontawesome.com/e9ae6e9b7e.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="cabecalho">
+    <header class="header">
       <div class="containerLogo">
         <img class="logo" src="./assets/img/logo.png" alt="logo alura dev">
       </div>
 
-      <div class="containerBarra-pesquisa">
-        <input type="text" class="barra-pesquisa" placeholder="Busque por algo">
+      <div class="containerSearchBar">
+        <input type="text" class="searchBar" placeholder="Busque por algo">
       </div>
 
       <div class="containerAuthor">
         <div class="author">
-          <img class="author__imagem" src="/assets/img/Photo.png" alt="imagem do autor">
-          <div class="author__nome">Harry</div>
+          <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
+          <div class="author__name">Harry</div>
         </div>
       </div>
     </header>
 
-    <div class="corpo">
+    <div class="body">
       <nav class="menu">
-        <div class="menu__titulo">Menu</div>
+        <div class="menu__title">Menu</div>
         <ul>
           <li class="menu__item">
             <a href="#">
-              <div class="menu__icone">
+              <div class="menu__icon">
                 <i class="fas fa-code" aria-label="ícone código de programação"></i>
               </div>
               <span>Editor de código</span>
@@ -45,7 +45,7 @@
           </li>
           <li class="menu__item">
             <a href="./comunidade.html">
-              <div class="menu__icone">
+              <div class="menu__icon">
                 <i class="fas fa-users" aria-label="ícone usuários"></i>
               </div>
               <span>Comunidade</span>
@@ -54,34 +54,34 @@
         </ul>
       </nav>
 
-      <main class="codigo">
-        <div class="codigo__textoContainer">
-          <div class="codigo__border">
-              <span class="codigo__circle codigo__circle1"></span>
-              <span class="codigo__circle codigo__circle2"></span>
-              <span class="codigo__circle codigo__circle3"></span>
-            <textarea cols="30" rows="12" class="codigo__texto"></textarea>
+      <main class="code">
+        <div class="code__containerText">
+          <div class="code__border">
+              <span class="code__circle code__circle1"></span>
+              <span class="code__circle code__circle2"></span>
+              <span class="code__circle code__circle3"></span>
+            <textarea cols="30" rows="12" class="code__text"></textarea>
           </div>
         </div>
 
-        <button type="button" class="codigo__btnVisualize">Visualizar com o highlight</button>
+        <button type="button" class="code__btnVisualize">Visualizar com o highlight</button>
       </main>
 
-      <aside class="edicao">
-        <span class="edicao__titulo">Seu projeto</span>
-        <input type="text" class="edicao__nomeProjeto" placeholder="Nome do seu projeto">
-        <textarea class="edicao__descricaoProjeto" placeholder="Descrição do seu projeto" rows="2"></textarea>
-        <span class="edicao__titulo">Personalização</span>
+      <aside class="edition">
+        <span class="edition__title">Seu projeto</span>
+        <input type="text" class="edition__projectName" placeholder="Nome do seu projeto">
+        <textarea class="edition__projectDescription" placeholder="Descrição do seu projeto" rows="2"></textarea>
+        <span class="edition__title">Personalização</span>
 
-        <select name="linguagem" id="linguagem" class="edicao__linguagem">
+        <select name="language" id="language" class="edition__language">
           <option value="javascript">Javascript</option>
           <option value="html">HTML</option>
           <option value="css">CSS</option>
         </select>
 
-        <input type="color" class="edicao__inputCorFundo" value="#6BD1FF">
+        <input type="color" class="edition__inputBackgroundColor" value="#6BD1FF">
 
-        <button class="edicao__btSalvarProjeto">Salvar projeto</button>
+        <button class="edition__btnSaveProject">Salvar projeto</button>
       </aside>
     </div>
   </body>
