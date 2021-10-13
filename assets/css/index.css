@@ -12,6 +12,8 @@
   --elems-center-d-flex: flex;
   --elems-center-jc-center: center;
 
+  --max-width: 1200px;  
+
   --circle-code-size: 12px;
 }
 
@@ -28,7 +30,9 @@ body {
   align-items: center;
   height: 56px;
 
+  margin: 0 auto;
   width: 100%;
+  max-width: var(--max-width);
 }
 
 .header .containerLogo {
@@ -102,12 +106,15 @@ body {
 
 /* body */
 .body {
-  margin-top: 40px;
   box-sizing: border-box;
 
   display: flex;
 
   width: 100%;
+
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: var(--max-width);
 }
 
 /* body left side */
@@ -381,3 +388,4 @@ body {
 .body .edition__btnSaveProject:focus {
   background: #96B9FD;
 }
+
