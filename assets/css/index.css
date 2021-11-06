@@ -20,6 +20,7 @@
 
   --mobile-max-width: 100%;
   --mobileHeaderIcon-size: 24px;
+  --mobileHeaderIcon-padding: 12px;
 
   --mobile-body-padding: 1rem;
 }
@@ -428,7 +429,8 @@ body {
 
     font-size: var(--mobileHeaderIcon-size);
     line-height: var(--mobileHeaderIcon-size);
-    padding: 12px;
+    padding: var(--mobileHeaderIcon-padding);
+    width: calc(var(--mobileHeaderIcon-size) + var(--mobileHeaderIcon-padding) * 2);
   }
 
   .header .containerMobile .menuIcon.inactive {
