@@ -414,16 +414,34 @@ body {
     display: none;
   }
 
-  .header .containerMobile {
+  .header .containerMobile{
+    display: block;
+  }
+
+  .header .containerMobile__menu, 
+  .header .containerMobile__search {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--header-height);
   }
 
+  .header .containerMobile__search {
+    display: none;
+  }
+
+  .header .containerMobile__menu.inactive {
+    display: none;
+  }
+
+  .header .containerMobile__search.active {
+    display: flex;
+  }
+
   .header .containerMobile .searchIcon, 
   .header .containerMobile .menuIcon,
-  .header .containerMobile .menuCloseIcon {
+  .header .containerMobile .menuCloseIcon,
+  .header .containerMobile .searchCloseIcon {
     box-sizing: border-box;
     color: var(--white-neutral);
 
@@ -431,18 +449,39 @@ body {
     line-height: var(--mobileHeaderIcon-size);
     padding: var(--mobileHeaderIcon-padding);
     width: calc(var(--mobileHeaderIcon-size) + var(--mobileHeaderIcon-padding) * 2);
+    text-align: center;
   }
 
-  .header .containerMobile .menuIcon.inactive {
+  .header .containerMobile__menu.inactive {
     display: none;
   }
 
-  .header .containerMobile .menuCloseIcon {
+  .header .containerMobile__menu .menuIcon.inactive {
     display: none;
   }
 
-  .header .containerMobile .menuCloseIcon.active {
+  .header .containerMobile__menu .menuCloseIcon {
+    display: none;
+  }
+
+  .header .containerMobile__menu .menuCloseIcon.active {
     display: inline-block;
+  }
+  
+  .header .containerMobile__search .searchBar {
+    height: 56px;
+    box-sizing: border-box;
+  
+    background: #2D415B;
+    border-radius: 8px;
+    border: none;
+    color: var(--white-neutral);
+  
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0px 14px;
+  
+    font: var(--font-body);
   }
 
   /* body left side (top on mobile) */
@@ -539,4 +578,3 @@ body {
     max-width: none;
   }
 }
-
