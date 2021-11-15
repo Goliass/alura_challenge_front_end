@@ -22,14 +22,15 @@
   --mobileHeaderIcon-size: 24px;
   --mobileHeaderIcon-padding: 12px;
 
-  --mobile-body-padding: 1rem;
+  --body-padding: 2rem;
+  --smallScreen-body-padding: 1rem; /* "smallScreen" < 768px */
 }
 
 body {
   font: var(--font-body);
 
   background-color: var(--dark-blue);
-  padding: 32px;
+  padding: 2rem;
 }
 
 .header .containerDesktop {
@@ -405,11 +406,7 @@ body {
   background: #96B9FD;
 }
 
-@media (max-width: 1024px) {
-  body {
-    padding: var(--mobile-body-padding);
-  }
-
+@media (max-width: 1023.98px) {
   .header .containerDesktop {
     display: none;
   }
@@ -464,6 +461,10 @@ body {
     font: var(--font-body);
   }
 
+  .header .containerMobile .searchCloseIcon {
+    display: none;
+  }
+
   /* body left side (top on mobile) */
   .body {
     flex-direction: column;
@@ -485,8 +486,6 @@ body {
     height: 70%;
     
     position: absolute;
-    right: var(--mobile-body-padding); 
-    top: calc(var(--mobile-body-padding) + var(--header-height) + 1rem);
   }
 
   .body .menu__mobile.active {
@@ -560,8 +559,11 @@ body {
 }
 
 @media (max-width: 767.98px) {
-  .header .containerMobile .searchBar,
-  .header .containerMobile .searchCloseIcon {
+  body {
+    padding: var(--smallScreen-body-padding);
+  }
+
+  .header .containerMobile .searchBar {
     display: none;
   }
 
@@ -579,9 +581,34 @@ body {
   }
 
   .header .containerMobile .containerLogo.inactive,
-  .header .containerMobile .searchIcon.inactive,
-  .header .containerMobile .menuIcon.inactive
-  {
+  .header .containerMobile .searchIcon.inactive {
     display: none;
+  }
+
+  .body .menu__mobile {
+    right: var(--smallScreen-body-padding); 
+    top: calc(var(--smallScreen-body-padding) + var(--header-height) + 1.5rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .header .containerMobile .searchIcon {
+    display: none;
+  }
+
+  .containerIcons {
+    flex-grow: 2;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .header .searchBar {
+    margin: 0 40px 0 40px;
+  }
+
+  .body .menu__mobile {
+    right: 16px; 
+    top: calc(var(--body-padding) + var(--header-height) + 1.5rem);
   }
 }
