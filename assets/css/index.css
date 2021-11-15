@@ -4,7 +4,7 @@
 
   --font-body: 16px/1.5rem Inter, sans-serif;
 
-  --header-height: 3.5rem;
+  --header-height: 3.5rem; /* 56px */
 
   --width-left: 20%;
   --width-center: 60%;
@@ -405,7 +405,7 @@ body {
   background: #96B9FD;
 }
 
-@media (max-width: 767.99px) {
+@media (max-width: 1024px) {
   body {
     padding: var(--mobile-body-padding);
   }
@@ -414,33 +414,17 @@ body {
     display: none;
   }
 
-  .header .containerMobile{
-    display: block;
-  }
+  .header .containerMobile {
+    height: var(--header-height);
 
-  .header .containerMobile__menu, 
-  .header .containerMobile__search {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--header-height);
   }
 
-  .header .containerMobile__search {
-    display: none;
-  }
-
-  .header .containerMobile__menu.inactive {
-    display: none;
-  }
-
-  .header .containerMobile__search.active {
-    display: flex;
-  }
-
-  .header .containerMobile .searchIcon, 
   .header .containerMobile .menuIcon,
   .header .containerMobile .menuCloseIcon,
+  .header .containerMobile .searchIcon, 
   .header .containerMobile .searchCloseIcon {
     box-sizing: border-box;
     color: var(--white-neutral);
@@ -452,23 +436,19 @@ body {
     text-align: center;
   }
 
-  .header .containerMobile__menu.inactive {
+  .header .menuIcon.inactive {
     display: none;
   }
 
-  .header .containerMobile__menu .menuIcon.inactive {
+  .header .menuCloseIcon {
     display: none;
   }
 
-  .header .containerMobile__menu .menuCloseIcon {
-    display: none;
-  }
-
-  .header .containerMobile__menu .menuCloseIcon.active {
+  .header .menuCloseIcon.active {
     display: inline-block;
   }
   
-  .header .containerMobile__search .searchBar {
+  .header .searchBar {
     height: 56px;
     box-sizing: border-box;
   
@@ -576,5 +556,32 @@ body {
 
   .body .edition > * {
     max-width: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header .containerMobile .searchBar,
+  .header .containerMobile .searchCloseIcon {
+    display: none;
+  }
+
+  .containerIcons.searchActive {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .containerMobile .searchBar.active,
+  .header .containerMobile .searchCloseIcon.active {
+    display: inline-block;
+  }
+
+  .header .containerMobile .containerLogo.inactive,
+  .header .containerMobile .searchIcon.inactive,
+  .header .containerMobile .menuIcon.inactive
+  {
+    display: none;
   }
 }
