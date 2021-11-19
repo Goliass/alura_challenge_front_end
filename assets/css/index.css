@@ -24,6 +24,8 @@
 
   --body-padding: 2rem;
   --smallScreen-body-padding: 1rem; /* "smallScreen" < 768px */
+
+  --mediumScreen--inputBackgroundColor-margin-left: 1.5rem;
 }
 
 body {
@@ -406,7 +408,7 @@ body {
   background: #96B9FD;
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1023.99px) {
   .header .containerDesktop {
     display: none;
   }
@@ -591,7 +593,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023.98px) {
+@media (min-width: 768px) and (max-width: 1023.99px) {
   .header .containerMobile .searchIcon {
     display: none;
   }
@@ -610,5 +612,26 @@ body {
   .body .menu__mobile {
     right: 16px; 
     top: calc(var(--body-padding) + var(--header-height) + 1.5rem);
+  }
+
+  .body .edition {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .body .edition__language {  
+    background: rgba(255, 255, 255, 0.16) url('../img/seta.svg') 96% 50% no-repeat;
+
+    box-sizing: border-box;
+    /* each side-by-side element reduces its size by half the margin / space that divides them, to be the same size and correct spacing */
+    width: calc(50% - var(--mediumScreen--inputBackgroundColor-margin-left) / 2);
+
+  }
+
+  .body .edition__inputBackgroundColor {  
+    box-sizing: border-box;
+    /* each side-by-side element reduces its size by half the margin / space that divides them, to be the same size and correct spacing */
+    width: calc(50% - var(--mediumScreen--inputBackgroundColor-margin-left) / 2);
+    margin-left: var(--mediumScreen--inputBackgroundColor-margin-left);
   }
 }
