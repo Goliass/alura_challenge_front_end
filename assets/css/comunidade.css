@@ -1,0 +1,72 @@
+.body .code {
+  width: calc(100% - var(--width-left));
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  column-gap: 1.5rem;
+  row-gap: 5rem;
+}
+
+.body .code__containerText {
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  flex-grow: 1;
+
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.body .code .code__border {
+  box-sizing: border-box;
+  border: 1.5rem solid #6BD1FF;
+}
+
+/* to-do abaixo remover apenas para ficar igual figma enquanto o comportamento da escolha da cor não esteja efetivado */
+.body .code__containerText:nth-child(1) .code__border {
+  border: 1.5rem solid #9AFF6B;
+}
+
+.body .code__containerText:nth-child(2) .code__border {
+  border: 1.5rem solid #6B83FF;
+}
+
+.body .code__containerText:nth-child(3) .code__border {
+  border: 1.5rem solid #FFC46B;
+}
+
+.body .code__containerText:nth-child(4) .code__border {
+  border: 1.5rem solid #FF6BCD;
+}
+/* to-do abaixo acima remover apenas para ficar igual figma */
+
+
+
+.code__info {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 1.5rem;
+}
+
+.code__title, .code__description {
+  color: white;
+}
+
+.code__title {
+  font: 1.3125rem/1.9375rem var(--font-family), var(--font-family-alt);
+  font-weight: bold;
+
+  margin: 8px 0px;
+}
+
+.code__description {
+  margin: 8px 0px;
+
+  font: var(--font-body);
+  opacity: 0.8;
+}

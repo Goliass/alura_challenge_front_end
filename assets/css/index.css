@@ -2,7 +2,10 @@
   --dark-blue: #051D3B;
   --white-neutral: #FFFFFF;
 
-  --font-body: 16px/1.5rem Inter, sans-serif;
+  --font-family: Inter;
+  --font-family-alt: sans-serif;
+
+  --font-body: 16px/1.5rem var(--font-family), var(--font-family-alt);
 
   --header-height: 3.5rem; /* 56px */
 
@@ -12,7 +15,7 @@
 
   --elems-center-width: 90%;
   --elems-center-d-flex: flex;
-  --elems-center-jc-center: center;
+  --elems-center-justify-content: normal;
 
   --max-width: 1200px;  
 
@@ -57,7 +60,7 @@ body {
   width: var(--width-center);
   
   display: var(--elems-center-d-flex);
-  justify-content: var(--elems-center-jc-center);
+  justify-content: var(--elems-center-justify-content);
 }
 
 .header .searchBar {
@@ -199,7 +202,7 @@ body {
 
   display: var(--elems-center-d-flex);
   flex-direction: column;
-  align-items: center;
+  align-items: var(--elems-center-justify-content);
 }
 
 .body .code__containerText {
@@ -207,7 +210,7 @@ body {
   width: var(--elems-center-width);
   
   display: var(--elems-center-d-flex);
-  justify-content: var(--elems-center-jc-center);
+  /* justify-content: var(--elems-center-justify-content); */
   align-items: flex-start;
 }
 
