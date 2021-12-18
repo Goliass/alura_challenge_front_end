@@ -89,7 +89,8 @@ body {
   background-color: rgba(255, 255, 255, 0.24);
 }
 
-.header .containerAuthor {
+/* .header .containerAuthor { */
+.containerAuthor {
   width: var(--width-right);
 
   display: flex;

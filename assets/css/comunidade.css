@@ -42,7 +42,7 @@
 .body .code__containerText:nth-child(4) .code__border {
   border: 1.5rem solid #FF6BCD;
 }
-/* to-do abaixo acima remover apenas para ficar igual figma */
+/* to-do acima remover apenas para ficar igual figma */
 
 
 
@@ -69,4 +69,34 @@
 
   font: var(--font-body);
   opacity: 0.8;
+}
+
+/* social */
+.code__social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 1.5rem;
+
+  box-sizing: border-box;
+  height: 2.5rem;
+  padding: 0.5rem;
+
+  color: var(--white-neutral);
+
+  position: relative;
+}
+
+.code__social__comment__quantity, 
+.code__social__like__quantity {
+  margin-left: 6px;
+}
+
+.code__social__like .fa-heart {
+  margin-left: 1rem;
+}
+
+.code__social .author__image {
+  height: 1.5rem;
 }
