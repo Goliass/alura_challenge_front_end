@@ -26,6 +26,10 @@
   border: 1.5rem solid #6BD1FF;
 }
 
+.body .code .code__border > *:hover {
+  cursor: pointer;
+}
+
 /* to-do abaixo remover apenas para ficar igual figma enquanto o comportamento da escolha da cor não esteja efetivado */
 .body .code__containerText:nth-child(1) .code__border {
   border: 1.5rem solid #9AFF6B;
