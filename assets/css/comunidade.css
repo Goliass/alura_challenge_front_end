@@ -120,13 +120,18 @@
   height: 1.5rem;
 }
 
-/* mobile (small screen) */
-@media (max-width: 767.98px) {
+/* mobile (small screen) and "tablet" (medium screen) */
+@media (max-width: 1023.99px) {
 
   .body .code {
+    flex-direction: column;
     width: 100%;
     row-gap: 2rem;
   }
+
+  .body .code__containerText {
+    width: 100%;
+  }  
 
   .code__social {
     padding-bottom: 0.5rem;
