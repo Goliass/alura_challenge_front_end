@@ -119,3 +119,21 @@
 .code__social .author__image {
   height: 1.5rem;
 }
+
+/* mobile (small screen) */
+@media (max-width: 767.98px) {
+
+  .body .code {
+    width: 100%;
+    row-gap: 2rem;
+  }
+
+  .code__social {
+    padding-bottom: 0.5rem;
+
+    visibility: visible;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+  }
+}
