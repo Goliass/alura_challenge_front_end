@@ -121,7 +121,7 @@
 }
 
 /* mobile (small screen) and "tablet" (medium screen) */
-@media (max-width: 1023.99px) {
+@media (max-width: 1023.98px) {
 
   .body .code {
     flex-direction: column;

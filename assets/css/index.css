@@ -412,7 +412,7 @@ body {
   background: #96B9FD;
 }
 
-@media (max-width: 1023.99px) {
+@media (max-width: 1023.98px) {
   .header .containerDesktop {
     display: none;
   }
@@ -597,7 +597,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023.99px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
   .header .containerMobile .searchIcon {
     display: none;
   }
