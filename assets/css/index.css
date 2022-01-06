@@ -184,15 +184,20 @@ body {
   margin: 0 0 0 1rem;
 }
 
-.body .menu__item:hover .menu__icon {
+.body .menu__item:hover .menu__icon,
+.body .menu__item.active .menu__icon
+{
   background-color: #5081FB;
 }
 
-.body .menu__item:hover .menu__icon i {
+.body .menu__item:hover .menu__icon i,
+.body .menu__item.active .menu__icon i
+{
   color: var(--white-neutral);
 }
 
-.body .menu__item:hover span {
+.body .menu__item:hover span,
+.body .menu__item.active span {
   color: var(--white-neutral);
 }
 

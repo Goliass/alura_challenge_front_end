@@ -1,0 +1,1 @@
+document.querySelector("#elComunidadeMenuOption").classList.add("active");

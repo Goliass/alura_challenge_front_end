@@ -1,0 +1,1 @@
+document.querySelector("#elEditorMenuOption").classList.add("active");
