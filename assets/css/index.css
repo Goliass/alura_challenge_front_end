@@ -271,6 +271,9 @@ body {
   padding: 1.5rem 0 0 0;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 14px;
+
+  /* preserve white spaces and line breaks */
+  white-space: pre-wrap;
 }
 
 .body .code__btnVisualize {

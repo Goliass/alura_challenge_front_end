@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Editor de texto online</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
 
+    <!-- https://github.com/highlightjs/highlight.js/blob/main/src/styles/base16/dracula.css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/dracula.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script> -->
+    <script src="./assets/js/highlight.min.js"></script>
+
     <script src="https://kit.fontawesome.com/e9ae6e9b7e.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -108,11 +115,13 @@
               <span class="code__circle code__circle2"></span>
               <span class="code__circle code__circle3"></span>
 
-              <pre><code class="code__text" contenteditable="true" aria-label="Edição do código">function teste() {}</code></pre>
+              <div id="codeWrapper">
+                <code class="code__text hljs" id="code" contenteditable="true" aria-label="Edição do código"></code>
+              </div>
           </div>
         </div>
 
-        <button type="button" class="code__btnVisualize">Visualizar com o highlight</button>
+        <button type="button" id="btnVisualizeCode" class="code__btnVisualize">Visualizar com o highlight</button>
       </main>
 
       <aside class="edition">
@@ -133,6 +142,6 @@
       </aside>
     </div>
 
-    <script type="module" src="./assets/js/index.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
