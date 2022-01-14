@@ -44,8 +44,8 @@
             <input type="text" class="searchBar" placeholder="Busque por algo">
             <i class="fas fa-times searchCloseIcon" aria-label="ícone fechar pesquisa"></i>
 
-            <i class="fas fa-bars menuIcon" aria-label="ícone menu"></i>
-            <i class="fas fa-times menuCloseIcon" aria-label="ícone fechar menu "></i>
+            <i id="menuIcon" class="fas fa-bars menuIcon" aria-label="ícone menu"></i>
+            <i id="menuCloseIcon" class="fas fa-times menuCloseIcon" aria-label="ícone fechar menu "></i>
           </div>
       </div>
     </header>
@@ -73,7 +73,7 @@
         </ul>
       </nav>
 
-      <nav class="menu__mobile">
+      <nav id="menu__mobile" class="menu__mobile">
         <ul>
           <li class="menu__item" id="elEditorMenuOption">
             <a href="./index.html">
@@ -236,5 +236,6 @@
     </div>
 
     <script type="module" src="./assets/js/comunidade.js"></script>
+    <script src="./assets/js/menu.js"></script>
   </body>
 </html>
