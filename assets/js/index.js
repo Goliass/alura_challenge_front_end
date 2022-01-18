@@ -21,3 +21,9 @@ function applyHighlight() {
 }
 
 elBtnVisualizeCode.addEventListener('click', applyHighlight);
+
+// change the color of code border when color picker changes
+const elInputBackgroundColor = document.querySelector("#inputBackgroundColor");
+elInputBackgroundColor.addEventListener('input', function() {
+  document.querySelector("#codeBorder").style.borderColor = elInputBackgroundColor.value;
+});
