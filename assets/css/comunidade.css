@@ -1,15 +1,20 @@
+:root {
+  --code-columnGap: 1.5rem;
+}
+
 .body .code {
   width: calc(100% - var(--width-left));
 
   flex-direction: row;
   flex-wrap: wrap;
 
-  column-gap: 1.5rem;
+  column-gap: var(--code-columnGap);
   row-gap: 5rem;
 }
 
 .body .code__containerText {
-  width: auto;
+  /* 2 cards per row */
+  width: calc((100% - var(--code-columnGap)) / 2);
 
   display: flex;
   flex-direction: column;

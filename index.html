@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Editor de texto online</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
 
+    <!-- https://github.com/highlightjs/highlight.js/blob/main/src/styles/base16/dracula.css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/dracula.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script> -->
+    <script src="./assets/js/highlight.min.js"></script>
+
     <script src="https://kit.fontawesome.com/e9ae6e9b7e.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -43,8 +50,8 @@
             <input type="text" class="searchBar" placeholder="Busque por algo">
             <i class="fas fa-times searchCloseIcon" aria-label="ícone fechar pesquisa"></i>
 
-            <i class="fas fa-bars menuIcon" aria-label="ícone menu"></i>
-            <i class="fas fa-times menuCloseIcon" aria-label="ícone fechar menu "></i>
+            <i id="menuIcon" class="fas fa-bars menuIcon" aria-label="ícone menu"></i>
+            <i id="menuCloseIcon" class="fas fa-times menuCloseIcon" aria-label="ícone fechar menu "></i>
           </div>
       </div>
     </header>
@@ -53,15 +60,15 @@
       <nav class="menu__desktop">
         <div class="menu__title">Menu</div>
         <ul>
-          <li class="menu__item">
-            <a href="#">
+          <li class="menu__item" id="elEditorMenuOption">
+            <a href="./index.html">
               <div class="menu__icon">
                 <i class="fas fa-code" aria-label="ícone código de programação"></i>
               </div>
               <span>Editor de código</span>
             </a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" id="elComunidadeMenuOption">
             <a href="./comunidade.html">
               <div class="menu__icon">
                 <i class="fas fa-users" aria-label="ícone usuários"></i>
@@ -72,17 +79,17 @@
         </ul>
       </nav>
 
-      <nav class="menu__mobile">
+      <nav id="menu__mobile" class="menu__mobile">
         <ul>
-          <li class="menu__item">
-            <a href="#">
+          <li class="menu__item" id="elEditorMenuOption">
+            <a href="./index.html">
               <div class="menu__icon">
                 <i class="fas fa-code" aria-label="ícone código de programação"></i>
               </div>
               <span>Editor de código</span>
             </a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" id="elComunidadeMenuOption">
             <a href="./comunidade.html">
               <div class="menu__icon">
                 <i class="fas fa-users" aria-label="ícone usuários"></i>
@@ -103,15 +110,18 @@
 
       <main class="code">
         <div class="code__containerText">
-          <div class="code__border">
+          <div id="codeBorder" class="code__border">
               <span class="code__circle code__circle1"></span>
               <span class="code__circle code__circle2"></span>
               <span class="code__circle code__circle3"></span>
-            <textarea cols="30" rows="14" class="code__text"></textarea>
+
+              <div id="codeWrapper">
+                <code class="code__text hljs" id="code" contenteditable="true" aria-label="Edição do código"></code>
+              </div>
           </div>
         </div>
 
-        <button type="button" class="code__btnVisualize">Visualizar com o highlight</button>
+        <button type="button" id="btnVisualizeCode" class="code__btnVisualize">Visualizar com o highlight</button>
       </main>
 
       <aside class="edition">
@@ -126,10 +136,14 @@
           <option value="css">CSS</option>
         </select>
 
-        <input type="color" class="edition__inputBackgroundColor" value="#6BD1FF">
+        <input type="color" id="inputBackgroundColor" class="edition__inputBackgroundColor" value="#6BD1FF">
 
         <button class="edition__btnSaveProject">Salvar projeto</button>
       </aside>
     </div>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/search.js"></script>
   </body>
 </html>

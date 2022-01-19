@@ -8,3 +8,8 @@ Projeto Alura Challenge Front End.
 * Cópias dos originais:
   * Design: https://www.figma.com/file/AyPnKL6umHXbRuTbwy773I/Alura-Challenge---Edição-Front-end-(Copy)
   * Tasks: https://trello.com/b/CLnhoonp/desafio-front-end-semana-1
+
+
+* tutorias utilizados para implementação do highlight.js:
+  * https://highlightjs.org/
+  * https://cursos.alura.com.br/como-usar-o-highlight-js-c859
