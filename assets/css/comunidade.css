@@ -20,8 +20,6 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  flex-grow: 1;
-
   background: rgba(0, 0, 0, 0.16);
   border-radius: 8px;
 
