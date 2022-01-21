@@ -7,17 +7,17 @@ const elLanguage = document.querySelector("#language");
 function applyHighlight() {
   const code = elCodeWrapper.innerText; // to convert possible line breaks (<br>) etc in \n
 
-  elCodeWrapper.innerHTML = `<code class="code__text hljs ${elLanguage.value}" id="code" contenteditable="true" aria-label="Edição do código">${code}</code>`;
+  elCodeWrapper.innerHTML = `<code class="code__text hljs ${elLanguage.value}" id="codeText" contenteditable="true" aria-label="Edição do código">${code}</code>`;
 
-  const elCode = document.querySelector("#code");
+  const elCodeText = document.querySelector("#codeText");
   /* when using the contenteditable attribute, the browsers consider different
     representations for line breaks (tag <br>, \n). 
     To avoid XSS attacks, the highlight.js removes what is not text, eg. <br>
     textContent is used to preserve the line breaks with \n (innerText would convert the \n's back to <br>).
   */
-  elCode.textContent = code;
+  elCodeText.textContent = code;
 
-  hljs.highlightElement(elCode);
+  hljs.highlightElement(elCodeText);
 }
 
 elBtnVisualizeCode.addEventListener('click', applyHighlight);
