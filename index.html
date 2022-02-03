@@ -34,7 +34,7 @@
         <div class="containerAuthor">
           <div class="author">
             <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-            <div class="author__name">Harry</div>
+            <div class="author__name">Author</div>
           </div>
         </div>
       </div>
@@ -126,8 +126,8 @@
 
       <aside class="edition">
         <span class="edition__title">Seu projeto</span>
-        <input type="text" class="edition__projectName" placeholder="Nome do seu projeto">
-        <textarea class="edition__projectDescription" placeholder="Descrição do seu projeto" rows="2"></textarea>
+        <input type="text" id="projectName" class="edition__projectName" placeholder="Nome do seu projeto">
+        <textarea class="edition__projectDescription" id="projectDescription" placeholder="Descrição do seu projeto" rows="2"></textarea>
         <span class="edition__title">Personalização</span>
 
         <select name="language" id="language" class="edition__language">
@@ -138,10 +138,11 @@
 
         <input type="color" id="inputBackgroundColor" class="edition__inputBackgroundColor" value="#6BD1FF">
 
-        <button class="edition__btnSaveProject">Salvar projeto</button>
+        <button id="btnSaveProject" class="edition__btnSaveProject">Salvar projeto</button>
       </aside>
     </div>
 
+    <script src="./assets/js/code.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/search.js"></script>
