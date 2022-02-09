@@ -9,6 +9,7 @@ const elProjectName = document.querySelector("#projectName");
 const elProjectDescription = document.querySelector("#projectDescription");
 const elLanguage = document.querySelector("#language");
 const elInputBackgroundColor = document.querySelector("#inputBackgroundColor");
+
 const elBtnSaveProject = document.querySelector("#btnSaveProject");
 
 function applyHighlight() {
@@ -51,3 +52,17 @@ elBtnSaveProject.addEventListener('click', function() {
     console.log("Error saving the project: " + error);
   }
 });
+
+const elCodeText = document.querySelector("#codeText");
+elCodeText.addEventListener('paste', function (event) {
+  event.preventDefault();
+  var text = event.clipboardData.getData('text/plain');
+  document.execCommand('insertText', false, text); // to-do cont testar com html css e ver porque está execCommand está riscado, se ok, mover pra outro arquivo, chamar no index.html e comunidade.html também.
+});
+
+// var ce = document.querySelector('[contenteditable]')
+// ce.addEventListener('paste', function (e) {
+//   e.preventDefault()
+//   var text = e.clipboardData.getData('text/plain')
+//   document.execCommand('insertText', false, text)
+// });

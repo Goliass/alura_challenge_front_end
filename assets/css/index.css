@@ -228,6 +228,8 @@ body {
   background: #141414;
   padding: 1rem;
   line-height: 1rem;
+
+  box-sizing: border-box; /* to-do review*/
 }
 
 .body .code .code__circle:first-of-type {
@@ -275,6 +277,8 @@ body {
 
   /* preserve white spaces and line breaks */
   white-space: pre-wrap;
+  overflow-wrap: break-word; /* to-do review*/
+  /* overflow-x: scroll; */ /* to-do review*/
 }
 
 .body .code__btnVisualize {
