@@ -57,12 +57,5 @@ const elCodeText = document.querySelector("#codeText");
 elCodeText.addEventListener('paste', function (event) {
   event.preventDefault();
   var text = event.clipboardData.getData('text/plain');
-  document.execCommand('insertText', false, text); // to-do cont testar com html css e ver porque está execCommand está riscado, se ok, mover pra outro arquivo, chamar no index.html e comunidade.html também.
+  document.execCommand('insertText', false, text);
 });
-
-// var ce = document.querySelector('[contenteditable]')
-// ce.addEventListener('paste', function (e) {
-//   e.preventDefault()
-//   var text = e.clipboardData.getData('text/plain')
-//   document.execCommand('insertText', false, text)
-// });

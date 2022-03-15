@@ -229,7 +229,7 @@ body {
   padding: 1rem;
   line-height: 1rem;
 
-  box-sizing: border-box; /* to-do review*/
+  box-sizing: border-box;
 }
 
 .body .code .code__circle:first-of-type {
@@ -270,15 +270,15 @@ body {
 
   color: var(--white-neutral);
   line-height: 18px;
-  min-height: 25vh;
+  height: 30vh;
   padding: 1.5rem 0 0 0;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 14px;
 
   /* preserve white spaces and line breaks */
   white-space: pre-wrap;
-  overflow-wrap: break-word; /* to-do review*/
-  /* overflow-x: scroll; */ /* to-do review*/
+  overflow-wrap: break-word;
+  overflow-y: auto; 
 }
 
 .body .code__btnVisualize {
