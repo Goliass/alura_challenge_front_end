@@ -1,5 +1,6 @@
 function codeObject(projectName, projectDescription, language, backgroundColor, code) {
 
+  codeId = Date.now();
   projectName = projectName || Date.now();
   projectDescription = projectDescription || Date.now();
   language = language || "javascript";
@@ -7,6 +8,7 @@ function codeObject(projectName, projectDescription, language, backgroundColor, 
   code = code || "alert('hello word');";
 
   const codeObj = {
+    codeId,
     projectName,
     projectDescription,
     language,
