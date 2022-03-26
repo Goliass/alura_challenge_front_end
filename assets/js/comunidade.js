@@ -12,7 +12,7 @@ const elCode = document.querySelector("#code");
 const codes = JSON.parse(window.localStorage.getItem('codes')) || [];
 
 codes.forEach(code => {
-  const codeObj = codeObject(code.projectName, code.projectDescription, code.language, code.backgroundColor, code.code);
+  const codeObj = codeObject(code.projectName, code.projectDescription, code.language, code.backgroundColor, code.code, code.codeId);
 
   const codeCardElement = document.createElement('div');
   codeCardElement.classList.add('code__containerText');
@@ -25,6 +25,8 @@ codes.forEach(code => {
       <div id="codeWrapper">
         <code class="code__text hljs ${codeObj.language}" id="codeText" aria-label="exibição do código"></code>
       </div>
+
+      <input type="hidden" name="codeId" id="codeId" value="${codeObj.codeId}">
     </a>
 
     <div class="code__info">
@@ -58,5 +60,4 @@ codes.forEach(code => {
 });
 
 applyHighlights();
-
 
