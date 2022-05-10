@@ -1,3 +1,13 @@
+/**
+ * 
+ * @param {*} projectName 
+ * @param {*} projectDescription 
+ * @param {*} language 
+ * @param {*} backgroundColor 
+ * @param {*} code 
+ * @param {*} codeId Unique code card ID. Pass it when NOT inserting a new code card
+ * @returns a code card object
+ */
 function codeObject(projectName, projectDescription, language, backgroundColor, code, codeId) {
  
   projectName = projectName || Date.now();

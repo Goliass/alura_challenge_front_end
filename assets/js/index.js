@@ -1,5 +1,4 @@
 document.querySelector("#elEditorMenuOption").classList.add("active");
-
 const elCodeWrapper = document.querySelector("#codeWrapper");
 
 const elBtnVisualizeCode = document.querySelector("#btnVisualizeCode");
@@ -12,6 +11,7 @@ const elInputBackgroundColor = document.querySelector("#inputBackgroundColor");
 
 const elBtnSaveProject = document.querySelector("#btnSaveProject");
 
+// functions
 function applyHighlight() {
   const code = elCodeWrapper.innerText; // to convert possible line breaks (<br>) etc in \n
 
@@ -28,10 +28,34 @@ function applyHighlight() {
   hljs.highlightElement(elCodeText);
 }
 
+function renderCodeCard(code) {
+  if (code) {
+    elProjectName.value = code.projectName;
+    elProjectDescription.value = code.projectDescription;
+    elLanguage.value = code.language;
+    elInputBackgroundColor.value = code.backgroundColor;
+    elCodeText.textContent = code.code
+  }
+}
+
+function loadCodeCard() {
+  const codeId = window.localStorage.getItem(lskey.codeId);
+
+  if (codeId) {
+    const codeArr = getLocalStorageCodes(codeId);
+
+    if (codeArr && codeArr.length > 0) {
+      const code = codeArr[0];
+      const codeObj = codeObject(code.projectName, code.projectDescription, code.language, code.backgroundColor, code.code);
+
+      renderCodeCard(codeObj);
+    }
+  }
+}
+
 elBtnVisualizeCode.addEventListener('click', applyHighlight);
 
 // change the color of code border when color picker changes
-
 elInputBackgroundColor.addEventListener('input', function() {
   document.querySelector("#codeBorder").style.borderColor = elInputBackgroundColor.value;
 });
@@ -43,10 +67,10 @@ elBtnSaveProject.addEventListener('click', function() {
   
     const codeObj = codeObject(elProjectName.value, elProjectDescription.value, elLanguage.value, elInputBackgroundColor.value, elCodeText.textContent);
   
-    const codes = JSON.parse(window.localStorage.getItem('codes')) || [];
+    const codes = getLocalStorageCodes();
     codes.push(codeObj);
     
-    window.localStorage.setItem('codes', JSON.stringify(codes));
+    window.localStorage.setItem(lskey.codes, JSON.stringify(codes));
     location.reload();
   } catch (error) {
     console.log("Error saving the project: " + error);
@@ -59,3 +83,6 @@ elCodeText.addEventListener('paste', function (event) {
   var text = event.clipboardData.getData('text/plain');
   document.execCommand('insertText', false, text);
 });
+
+loadCodeCard();
+applyHighlight();
