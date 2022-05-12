@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Editor de texto online</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/dracula.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/comunidade.css">
 
@@ -12,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/highlight.min.js"></script>
     <script src="https://kit.fontawesome.com/e9ae6e9b7e.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -28,7 +31,7 @@
         <div class="containerAuthor">
           <div class="author">
             <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-            <div class="author__name">Harry</div>
+            <div class="author__name">Author</div>
           </div>
         </div>
       </div>
@@ -55,7 +58,7 @@
         <div class="menu__title">Menu</div>
         <ul>
           <li class="menu__item" id="elEditorMenuOption">
-            <a href="./index.html">
+            <a href="./index.html" class="menu__link">
               <div class="menu__icon">
                 <i class="fas fa-code" aria-label="ícone código de programação"></i>
               </div>
@@ -76,7 +79,7 @@
       <nav id="menu__mobile" class="menu__mobile">
         <ul>
           <li class="menu__item" id="elEditorMenuOption">
-            <a href="./index.html">
+            <a href="./index.html" class="menu__link">
               <div class="menu__icon">
                 <i class="fas fa-code" aria-label="ícone código de programação"></i>
               </div>
@@ -97,145 +100,19 @@
         <div class="containerAuthor mobile">
           <div class="author">
             <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-            <div class="author__name">Harry</div>
+            <div class="author__name">Author</div>
           </div>
         </div>
       </nav>
 
-      <main class="code">
-        <div class="code__containerText">
-          <a href="./index.html" class="code__border">
-            <span class="code__circle code__circle1"></span>
-            <span class="code__circle code__circle2"></span>
-            <span class="code__circle code__circle3"></span>
-            <textarea rows="8" class="code__text" disabled>adsçlkasd</textarea>
-          </a>
-
-          <div class="code__info">
-            <h4 class="code__title">Título do projeto</h4>
-            <div class="code__description">Descrição do projeto</div>
-
-            <div class="code__social">
-              <div class="code__social__engagement">
-                <span class="code__social__comment">
-                  <i class="fas fa-comment" aria-label="ícone comentário"></i>
-                  <span class="code__social__comment__quantity" alt="quantidade de comentários">8</span>
-                </span>
-                <span class="code__social__like">
-                  <i class="fas fa-heart" aria-label="ícone coração"></i>
-                  <span class="code__social__like__quantity" alt="quantidade de likes">9</span>
-                </span>
-              </div>
-              <div class="containerAuthor">
-                <div class="author">
-                  <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-                  <div class="author__name">@Harry</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="code__containerText">
-          <a href="./index.html" class="code__border">
-            <span class="code__circle code__circle1"></span>
-            <span class="code__circle code__circle2"></span>
-            <span class="code__circle code__circle3"></span>
-            <textarea rows="8" class="code__text" disabled>adsçlkasd</textarea>
-          </a>
-
-          <div class="code__info">
-            <h4 class="code__title">Título do projeto</h4>
-            <div class="code__description">Descrição do projeto</div>
-
-            <div class="code__social">
-              <div class="code__social__engagement">
-                <span class="code__social__comment">
-                  <i class="fas fa-comment" aria-label="ícone comentário"></i>
-                  <span class="code__social__comment__quantity" alt="quantidade de comentários">8</span>
-                </span>
-                <span class="code__social__like">
-                  <i class="fas fa-heart" aria-label="ícone coração"></i>
-                  <span class="code__social__like__quantity" alt="quantidade de likes">9</span>
-                </span>
-              </div>
-              <div class="containerAuthor">
-                <div class="author">
-                  <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-                  <div class="author__name">@Harry</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="code__containerText">
-          <a href="./index.html" class="code__border">
-            <span class="code__circle code__circle1"></span>
-            <span class="code__circle code__circle2"></span>
-            <span class="code__circle code__circle3"></span>
-            <textarea rows="8" class="code__text" disabled>adsçlkasd</textarea>
-          </a>
-          <div class="code__info">
-            <h4 class="code__title">Título do projeto</h4>
-            <div class="code__description">Descrição do projeto</div>
-
-            <div class="code__social">
-              <div class="code__social__engagement">
-                <span class="code__social__comment">
-                  <i class="fas fa-comment" aria-label="ícone comentário"></i>
-                  <span class="code__social__comment__quantity" alt="quantidade de comentários">8</span>
-                </span>
-                <span class="code__social__like">
-                  <i class="fas fa-heart" aria-label="ícone coração"></i>
-                  <span class="code__social__like__quantity" alt="quantidade de likes">9</span>
-                </span>
-              </div>
-              <div class="containerAuthor">
-                <div class="author">
-                  <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-                  <div class="author__name">@Harry</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="code__containerText">
-          <a href="./index.html" class="code__border">
-            <span class="code__circle code__circle1"></span>
-            <span class="code__circle code__circle2"></span>
-            <span class="code__circle code__circle3"></span>
-            <textarea rows="8" class="code__text" disabled>adsçlkasd</textarea>
-          </a>
-          <div class="code__info">
-            <h4 class="code__title">Título do projeto</h4>
-            <div class="code__description">Descrição do projeto</div>
-
-            <div class="code__social">
-              <div class="code__social__engagement">
-                <span class="code__social__comment">
-                  <i class="fas fa-comment" aria-label="ícone comentário"></i>
-                  <span class="code__social__comment__quantity" alt="quantidade de comentários">8</span>
-                </span>
-                <span class="code__social__like">
-                  <i class="fas fa-heart" aria-label="ícone coração"></i>
-                  <span class="code__social__like__quantity" alt="quantidade de likes">9</span>
-                </span>
-              </div>
-              <div class="containerAuthor">
-                <div class="author">
-                  <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
-                  <div class="author__name">@Harry</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <main id="code" class="code">
+        <!-- comunidade.js -->
       </main>
     </div>
 
-    <script type="module" src="./assets/js/comunidade.js"></script>
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/code.js"></script>
+    <script src="./assets/js/comunidade.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/search.js"></script>
   </body>
