@@ -34,12 +34,12 @@ function renderCodeCard(code) {
     elProjectDescription.value = code.projectDescription;
     elLanguage.value = code.language;
     elInputBackgroundColor.value = code.backgroundColor;
-    elCodeText.textContent = code.code
+    elCodeText.textContent = code.code;
   }
 }
 
 function loadCodeCard() {
-  const codeId = window.localStorage.getItem(lskey.codeId);
+  const codeId = getLocalStorageCodeId();
 
   if (codeId) {
     const codeArr = getLocalStorageCodes(codeId);
@@ -64,16 +64,31 @@ elInputBackgroundColor.addEventListener('input', function() {
 elBtnSaveProject.addEventListener('click', function() {
   try {
     const elCodeText = document.querySelector("#codeText");
+    const codeId = getLocalStorageCodeId();
   
-    const codeObj = codeObject(elProjectName.value, elProjectDescription.value, elLanguage.value, elInputBackgroundColor.value, elCodeText.textContent);
+    const codeObj = codeObject(elProjectName.value, elProjectDescription.value, elLanguage.value, elInputBackgroundColor.value, elCodeText.textContent, codeId);
   
     const codes = getLocalStorageCodes();
-    codes.push(codeObj);
+
+    if (codeId) {
+      const index = codes.findIndex((code, index, array) => {
+        return code.codeId == codeId;
+      });
+
+      if (index >= 0) { // code card update (through replacement)
+        codes[index] = codeObj;
+        setLocalStorageCodeId("");
+      }
+    } else { // new code card
+      codes.push(codeObj);
+    }
     
-    window.localStorage.setItem(lskey.codes, JSON.stringify(codes));
-    location.reload();
+    if (codes && codes.length > 0) {
+      window.localStorage.setItem(lskey.codes, JSON.stringify(codes));
+      location.reload();
+    }
   } catch (error) {
-    console.log("Error saving the project: " + error);
+    console.log("Error saving the code card: " + error);
   }
 });
 

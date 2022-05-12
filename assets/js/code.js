@@ -16,7 +16,7 @@ function codeObject(projectName, projectDescription, language, backgroundColor, 
   backgroundColor = backgroundColor || "blue";
   code = code || "alert('hello word');";
 
-  codeId = codeId || Date.now(); // when NOT inserting a new code card || when inserting a new one
+  codeId = codeId || Date.now() + ''; // when NOT inserting a new code card || when inserting a new one
 
   const codeObj = {
     codeId,

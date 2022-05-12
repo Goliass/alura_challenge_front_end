@@ -23,9 +23,17 @@ function getLocalStorageCodes(codeId) {
   return codes;
 }
 
+function getLocalStorageCodeId() {
+  const codeId = window.localStorage.getItem(lskey.codeId) || null;
+  return codeId;
+}
+
+function setLocalStorageCodeId(codeId='') {
+  window.localStorage.setItem(lskey.codeId, codeId);
+}
+
 elMenuLinks.forEach(elMenuLink => {
   elMenuLink.addEventListener('click', (event) => {
-
-    window.localStorage.setItem(lskey.codeId, "");
+    setLocalStorageCodeId("");
   });
 });
