@@ -34,6 +34,7 @@ function renderCodeCard(code) {
     elProjectDescription.value = code.projectDescription;
     elLanguage.value = code.language;
     elInputBackgroundColor.value = code.backgroundColor;
+    changeBorderColor(elInputBackgroundColor.value);
     elCodeText.textContent = code.code;
   }
 }
@@ -53,11 +54,15 @@ function loadCodeCard() {
   }
 }
 
+function changeBorderColor(color) {
+  document.querySelector("#codeBorder").style.borderColor = color;
+}
+
 elBtnVisualizeCode.addEventListener('click', applyHighlight);
 
 // change the color of code border when color picker changes
 elInputBackgroundColor.addEventListener('input', function() {
-  document.querySelector("#codeBorder").style.borderColor = elInputBackgroundColor.value;
+  changeBorderColor(elInputBackgroundColor.value);
 });
 
 
