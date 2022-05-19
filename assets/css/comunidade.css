@@ -31,10 +31,20 @@
   border: 1.5rem solid #6BD1FF;
 
   text-decoration: none;
+
+  position: relative;
 }
 
 .body .code .code__border > *:hover {
   cursor: pointer;
+}
+
+.body .code .code__delete {
+  color: gray;
+  font-weight: 900;
+
+  position: absolute;
+  right: 1rem;
 }
 
 .code__info {
