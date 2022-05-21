@@ -1,4 +1,5 @@
-Projeto Alura Challenge Front End.
+Projeto Challenge Front End (formatação e estilização de trechos de código), da Alura, para praticar HTML, CSS e Javascript.
+Sim, teria muita coisa para melhorar. Sempre tem ;)
 
 * Links originais: 
   * https://www.alura.com.br/challenges/front-end/semana-01-do-figma-ao-html-e-css
@@ -13,6 +14,6 @@ Projeto Alura Challenge Front End.
     * https://trello.com/b/hK0BoJp8/desafio-front-end-semana-3
 
 
-* tutorias utilizados para implementação do highlight.js:
+* Tutorias considerados para a utilização do highlight.js:
   * https://highlightjs.org/
   * https://cursos.alura.com.br/como-usar-o-highlight-js-c859

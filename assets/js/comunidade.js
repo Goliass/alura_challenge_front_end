@@ -19,10 +19,11 @@ function loadCodeCards() {
     codeCardElement.classList.add('code__containerText');
 
     codeCardElement.innerHTML = `
-      <a href="./index.html" class="code__border" style="border: 1.5rem solid ${codeObj.backgroundColor}">
+      <a href="./index.html" id="codeBorder" class="code__border" style="border: 1.5rem solid ${codeObj.backgroundColor}">
         <span class="code__circle code__circle1"></span>
         <span class="code__circle code__circle2"></span>
         <span class="code__circle code__circle3"></span>
+        <span class="code__delete" id="codeDelete">X</span>
         <div id="codeWrapper">
           <code class="code__text hljs ${codeObj.language}" id="codeText" aria-label="exibição do código"></code>
         </div>
@@ -54,14 +55,38 @@ function loadCodeCards() {
         </div>
       </div>`
 
+      const elCodeDelete = codeCardElement.querySelector("#codeDelete");
+      elCodeDelete.addEventListener('click', (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+
+        const targetElement = event.target;
+  
+        const codeId = targetElement.parentElement.querySelector("#codeId").attributes.value.value;
+
+        if (codeId) {
+          const codesDel = getLocalStorageCodes();
+
+          const index = codesDel.findIndex((codeDel, index, array) => {
+            return codeDel.codeId == codeId;
+          });
+    
+          if (index >= 0) {            
+            codesDel.splice(index, 1); // code card delete (through replacement)
+
+            window.localStorage.setItem(lskey.codes, JSON.stringify(codesDel));
+            targetElement.parentElement.parentElement.remove(); // ".code__containerText"
+          }
+        }
+      });
+
       const codeText = codeCardElement.querySelector("#codeText");
       codeText.textContent = code.code;
 
       elCode.appendChild(codeCardElement);
   });
 
-  const elCodeBorders = document.querySelectorAll(".code__border");
-  
+  const elCodeBorders = document.querySelectorAll("#codeBorder");
   elCodeBorders.forEach(elCodeBorder => {
     elCodeBorder.addEventListener('click', (event) => {
       event.preventDefault();

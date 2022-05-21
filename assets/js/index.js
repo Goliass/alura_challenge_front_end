@@ -34,6 +34,7 @@ function renderCodeCard(code) {
     elProjectDescription.value = code.projectDescription;
     elLanguage.value = code.language;
     elInputBackgroundColor.value = code.backgroundColor;
+    changeBorderColor(elInputBackgroundColor.value);
     elCodeText.textContent = code.code;
   }
 }
@@ -53,16 +54,24 @@ function loadCodeCard() {
   }
 }
 
+function changeBorderColor(color) {
+  document.querySelector("#codeBorder").style.borderColor = color;
+}
+
 elBtnVisualizeCode.addEventListener('click', applyHighlight);
 
 // change the color of code border when color picker changes
 elInputBackgroundColor.addEventListener('input', function() {
-  document.querySelector("#codeBorder").style.borderColor = elInputBackgroundColor.value;
+  changeBorderColor(elInputBackgroundColor.value);
 });
 
 
 elBtnSaveProject.addEventListener('click', function() {
   try {
+    // workaround to format the code before saving (sometimes it was saved all in the same line, e.g, unformatted)
+    document.querySelector("#codeWrapper").style.opacity = 0; // hide the code formatting from user
+    applyHighlight();
+
     const elCodeText = document.querySelector("#codeText");
     const codeId = getLocalStorageCodeId();
   
