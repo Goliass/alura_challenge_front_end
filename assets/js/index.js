@@ -68,6 +68,10 @@ elInputBackgroundColor.addEventListener('input', function() {
 
 elBtnSaveProject.addEventListener('click', function() {
   try {
+    // workaround to format the code before saving (sometimes it was saved all in the same line, e.g, unformatted)
+    document.querySelector("#codeWrapper").style.opacity = 0; // hide the code formatting from user
+    applyHighlight();
+
     const elCodeText = document.querySelector("#codeText");
     const codeId = getLocalStorageCodeId();
   
