@@ -1,4 +1,4 @@
-Projeto Challenge Front End (formatação e estilização de trechos de código), da Alura, para praticar HTML, CSS e Javascript. 
+Projeto Challenge Front End (formatação e estilização de trechos de código), da Alura, para praticar HTML, CSS e Javascript. <br>
 Sim, teria muita coisa para melhorar. Sempre tem ;)
 
 * Links originais: 
