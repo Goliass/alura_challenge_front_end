@@ -48,7 +48,7 @@ function loadCodeCards() {
           </div>
           <div class="containerAuthor">
             <div class="author">
-              <img class="author__image" src="/assets/img/Photo.png" alt="imagem do autor">
+              <img class="author__image" src="./assets/img/photo.png" alt="imagem do autor">
               <div class="author__name">@Author</div>
             </div>
           </div>
