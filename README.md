@@ -10,9 +10,7 @@ Sim, teria muita coisa para melhorar. Sempre tem ;)
 * Cópias dos originais:
   * Design: https://www.figma.com/file/AyPnKL6umHXbRuTbwy773I/Alura-Challenge---Edição-Front-end-(Copy)
   * Tasks: 
-    * https://trello.com/b/CLnhoonp/desafio-front-end-semana-1
-    * https://trello.com/b/1uvPdig1/desafio-front-end-semana-2
-    * https://trello.com/b/hK0BoJp8/desafio-front-end-semana-3
+    * [semanas 1, 2 e 3](https://trello.com/b/CLnhoonp/desafio-front-end-semana-1)
 
 
 * Tutorias considerados para a utilização do highlight.js:
